@@ -1,3 +1,31 @@
+.mobile-menu{
+    position: relative;
+    .showMenu{
+        margin-top: 15px;
+        position: absolute;
+        width: 300px;
+        height: auto;
+        background-color: white;
+        box-shadow: 5px 5px 10px rgb(112, 112, 112);
+        padding: 10px 20px;
+        z-index: 111;
+
+        ul{
+            li{
+                margin-bottom: 5px;
+                padding: 5px 0;
+                font-weight: 600;
+                text-transform: capitalize;
+                transition: all .4s;
+                &:hover{
+                    color: orange;
+                }
+            }
+        }
+    }
+}
+
+
 .icon{
     margin-left: -60px;
     cursor: pointer;

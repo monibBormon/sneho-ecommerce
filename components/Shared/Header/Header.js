@@ -1,22 +1,45 @@
 import Swal from 'sweetalert2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faAngleRight, faSearch, faUser, faShoppingCart, faBars, faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faTimes, faAngleRight, faSearch, faUser, faShoppingCart, faBars, faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 
 const Header = () => {
+    const [show, setShow] = useState(false)
 
     const handleMobileMenu = () => {
+        setShow(true)
+    }
+    const closeMenu = () => {
+        setShow(false)
+    }
+
+
+    /* const handleMobileMenu = () => {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Mobile Menu is under Construction'
         })
-    }
+    } */
     return (
         <div>
             <div className="mobile-menu px-5 lg:px-0 flex justify-around py-4 md:hidden">
-                <div onClick={handleMobileMenu} className="icon w-5">
-                    <FontAwesomeIcon icon={faBars} />
+                <div className="icon w-5">
+                    {
+                        show === true ? <FontAwesomeIcon onClick={closeMenu} icon={faTimes} /> : <FontAwesomeIcon onClick={handleMobileMenu} icon={faBars} />
+                    }
+                    {
+                        show === true && <div className='showMenu'>
+                            <ul>
+                                <li>all Categories</li>
+                                <li>Baby care</li>
+                                <li>child care</li>
+                                <li>shop</li>
+                                <li>baby collection</li>
+                            </ul>
+                        </div>
+                    }
                 </div>
                 <div className="search-mobile">
                     <input className='focus:outline-none border-2 h-10 pl-2 rounded' type="text" placeholder='What are you looking?' />
