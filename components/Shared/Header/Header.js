@@ -1,11 +1,21 @@
+import Swal from 'sweetalert2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleRight, faSearch, faUser, faShoppingCart, faBars, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
+
 const Header = () => {
+
+    const handleMobileMenu = () => {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Mobile Menu is under Construction'
+        })
+    }
     return (
         <div>
             <div className="mobile-menu px-5 lg:px-0 flex justify-around py-4 md:hidden">
-                <div className="icon w-5">
+                <div onClick={handleMobileMenu} className="icon w-5">
                     <FontAwesomeIcon icon={faBars} />
                 </div>
                 <div className="search-mobile">
