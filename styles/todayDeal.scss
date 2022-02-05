@@ -1,0 +1,34 @@
+.today-deal-box{
+    position: relative;
+    .deal-percent{
+        position: absolute;
+        top: 10%;
+        right: 5%;
+    }
+    .today-deal-text{
+        position:relative;
+    
+        &:before{
+            position:absolute;
+            content:"";
+            background-color: orange;
+            width:50%;
+            height:10px;
+            bottom: 60px;
+            left: 0;
+            border-radius: 10px;
+            z-index: 11;
+        }
+        &:after{
+            position:absolute;
+            content:"";
+            background-color: rgb(143, 143, 143);
+            width:50%;
+            height:10px;
+            bottom: 60px;
+            right: 10px;
+            border-radius: 10px;
+            z-index: 1;
+        }
+    }
+}

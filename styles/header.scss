@@ -1,0 +1,42 @@
+.icon{
+    margin-left: -60px;
+    cursor: pointer;
+}
+.cart{
+    margin-right: -50px;
+    cursor: pointer;
+}
+
+.top-menu{
+    ul{
+        li{
+            color:gray;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+.main-menu{
+    ul{
+        text-align: center;
+        li{
+            display: inline-block;
+            margin: 0 18px;
+            font-weight: 600;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+        li.all-cat{
+            margin-right: 50px;
+            .arrowIcon{
+                margin-left: 20px;
+            }
+        }
+        li.blogs{
+            color: yellow;
+            font-size: 20px;
+            margin-left: 50px;
+        }
+    }
+}

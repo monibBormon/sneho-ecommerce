@@ -1,3 +1,14 @@
+@import './header.scss';
+@import './sliders.scss';
+@import './todayDeal.scss';
+@import './productForYou.scss';
+@import './newBlogs.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 html,
 body {
   padding: 0;
